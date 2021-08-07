@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(pexels-brady-knoll-3369526.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .Navigation a{
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+header .Navigation a:not(:last-child){
+    margin-right: 30px;
+}
+
+header .Navigation a:hover{
+    background: #fff;
+}
+.Content{
+    max-width: 650px;
+    margin: 60px 100px;
+}
+
+.Content .Info h2{
+    color: #226A80;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+.Content .Info .h2 span{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.Content .Info p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+.Content .info-btn{
+    color: #fff;
+    background:#226A80 ;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    transition: .3s;
+    transition-property: background;
+}
+.Content .info-btn:hover{
+    background: #0C4F60;
+
+}
+.media-icon a{
+    position: relative;
+    color: #111;
+    font-size: 26px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+media-icon a:not(:last-child){
+    margin-right: 60px;
+}
+.media-icon a :hover{
+    transition: scale(1.5);
+}
+label{
+    display: none;
+}
+#check{
+    z-index: 3;
+}
+@media (max-width: 960px){
+    header .Navigation{
+        display: none;
+    }
+    lable{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    label:hover{
+        color: #fff;
+    }
+    lable.close-btn{
+        display: none;
+
+    }
+    #check:checked ~ header .Navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114, 223, 255, 0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+    }
+}
